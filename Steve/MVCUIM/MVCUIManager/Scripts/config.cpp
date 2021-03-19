@@ -1,13 +1,13 @@
 class CfgPatches
 {
-    class MyPrefix_MyMod_Scripts
+    class Steve_MVCUIM_Scripts
     {
         units[]={};
         weapons[]={};
         requiredVersion=0.1;
         requiredAddons[]=
         {
-            "DZ_Data", "Steve_MVCUIM_GUI"
+            "DZ_Data", "Steve_MVCUIM_GUI", "JM_CF_Scripts"
         };
     };
 };
@@ -22,7 +22,7 @@ class CfgMods
 		hideName = 0;
 		hidePicture = 1;
 		name = "MVC UI Manager";
-		credits = "Jacob_Mango, Arkensor";
+		credits = "Jacob_Mango, Arkensor, InclementDab";
 		creditsJson = "Steve/MVCUIM/Scripts/Data/Credits.json";
 		author = "Steve aka Saluteh";
 		authorID = "0"; 

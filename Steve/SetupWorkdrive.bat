@@ -13,6 +13,6 @@ IF exist "P:\Steve\MVCUIM\" (
 )
 
 echo Creating link P:\Steve\MVCUIM
-mklink /J "P:\Steve\MVCUIM\" "%cd%\Steve\MVCUIM\"
+mklink /J "P:\Steve\MVCUIM\" "D:\Github\MVCUIManager\MVCUIManager\Steve\MVCUIM\"
 
 echo Done
