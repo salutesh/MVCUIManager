@@ -60,7 +60,7 @@ GameProjectClass {
 					Paths {
 						"scripts/3_Game"
 						"JM/CF/Scripts/3_Game"
-						"Steve/MVCUIM/Scripts/3_Game"
+						"Steve/MVCUIM/MVCUIManager/Scripts/3_Game"
 					}
 					EntryPoint "CreateGame"
 				}
@@ -69,7 +69,7 @@ GameProjectClass {
 					Paths {
 						"scripts/4_World"
 						"JM/CF/Scripts/4_World"
-						"Steve/MVCUIM/Scripts/4_World"
+						"Steve/MVCUIM/MVCUIManager/Scripts/4_World"
 					}
 					EntryPoint ""
 				}
@@ -78,7 +78,7 @@ GameProjectClass {
 					Paths {
 						"scripts/5_Mission"
 						"JM/CF/Scripts/5_Mission"
-						"Steve/MVCUIM/Scripts/5_Mission"
+						"Steve/MVCUIM/MVCUIManager/Scripts/5_Mission"
 					}
 					EntryPoint "CreateMission"
 				}
@@ -87,7 +87,7 @@ GameProjectClass {
 					Paths {
 						"scripts/editor/Workbench"
 						"scripts/editor/plugins"
-						"Steve/MVCUIM/Scripts/Workbench/Plugins"
+						"Steve/MVCUIM/MVCUIManager/Scripts/Workbench/Plugins"
 					}
 					EntryPoint ""
 				}
