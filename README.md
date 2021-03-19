@@ -7,3 +7,6 @@ This is a framework for the DayZ Community Framework MVC system to make its feat
 GitHub: https://github.com/Jacob-Mango/DayZ-Community-Framework
 
 Steam Workshop Item: https://steamcommunity.com/sharedfiles/filedetails/?id=1559212036
+
+## Contributors
+[Steve aka Salutesh](https://github.com/salutesh)
