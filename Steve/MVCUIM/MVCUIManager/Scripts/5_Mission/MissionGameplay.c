@@ -1,5 +1,7 @@
 modded class MissionGameplay
 {
+    ref MVCUIMenuManager m_MVCUIMenuManager;
+
 	override void Pause()
 	{
 		if ( GetDayZGame().GetExpansionGame().GetExpansionUIManager().GetMenu() )
@@ -12,7 +14,25 @@ modded class MissionGameplay
 	{
 		super.CloseAllMenus();
 		
-		if ( GetDayZGame().GetExpansionGame().GetExpansionUIManager().GetMenu() )
-			GetDayZGame().GetExpansionGame().GetExpansionUIManager().CloseAll();
+		if ( GetDayZGame().GetMVCUIManager().GetMenu() )
+			GetDayZGame().GetMVCUIManager().CloseAll();
+	}
+
+    void CreateMVCUIMenuManager()
+	{
+		ref MVCUIManager mvcUIManager = GetDayZGame().GetMVCUIManager();
+		if (mvcUIManager && !m_MVCUIMenuManager)
+			m_MVCUIMenuManager = new MVCUIMenuManager(mvcUIManager);
+	}
+	
+	void DestroyExpansionUIMenuManager()
+	{
+		if (m_MVCUIMenuManager)
+			delete m_MVCUIMenuManager;
+	}
+	
+	MVCUIMenuManager GetMVCUIMenuManager()
+	{
+		return m_MVCUIMenuManager;
 	}
 };
