@@ -24,11 +24,17 @@ class CfgMods
 		name = "MVC UI Manager";
 		credits = "Jacob_Mango, Arkensor, InclementDab";
 		creditsJson = "Steve/MVCUIM/Scripts/Data/Credits.json";
+		inputs = "Steve/MVCUIM/Scripts/Data/Inputs.xml";
 		author = "Steve aka Saluteh";
 		authorID = "0"; 
 		version = "0.1"; 
 		extra = 0;
 		type = "mod";
+		logo = "";
+		logoSmall = "";
+		logoOver = "";
+		tooltip = "MVC UI Manager";
+		overview = "";
 		
 		dependencies[] = { "Game", "World", "Mission" };
 		
