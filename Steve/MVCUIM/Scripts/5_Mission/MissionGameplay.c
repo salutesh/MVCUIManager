@@ -4,7 +4,7 @@ modded class MissionGameplay
 
 	override void Pause()
 	{
-		if ( GetDayZGame().GetExpansionGame().GetExpansionUIManager().GetMenu() )
+		if ( GetDayZGame().GetMVCUIManager().GetMenu() )
 			return;
 		
 		super.Pause();

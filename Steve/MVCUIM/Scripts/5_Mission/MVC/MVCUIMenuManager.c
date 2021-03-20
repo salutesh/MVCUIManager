@@ -1,7 +1,7 @@
 class MVCUIMenuManager
 {
     ref MVCUIManager m_MVCUIManager;
-	void ExpansionUIMenuManager(MVCUIManager uiManager)
+	void MVCUIMenuManager(MVCUIManager uiManager)
 	{
 		m_MVCUIManager = uiManager;
 		
