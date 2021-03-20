@@ -7,7 +7,6 @@
 			<input name="UAMVCPlayerListToggle" />
 		</exclude>
     </inputs>
-
     <preset>
 		<input name="UAMVCPlayerListToggle">
             <btn name="kPause" />

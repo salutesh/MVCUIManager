@@ -1,6 +1,16 @@
 modded class MissionGameplay
 {
     ref MVCUIMenuManager m_MVCUIMenuManager;
+	
+	void MissionGameplay()
+	{		
+		CreateMVCUIMenuManager();
+	}
+
+	void ~MissionGameplay()
+	{
+		DestroyMVCUIMenuManager();
+	}
 
 	override void Pause()
 	{
@@ -25,7 +35,7 @@ modded class MissionGameplay
 			m_MVCUIMenuManager = new MVCUIMenuManager(mvcUIManager);
 	}
 	
-	void DestroyExpansionUIMenuManager()
+	void DestroyMVCUIMenuManager()
 	{
 		if (m_MVCUIMenuManager)
 			delete m_MVCUIMenuManager;
@@ -38,6 +48,7 @@ modded class MissionGameplay
 	
 	void OnPlayerListTogglePressed()
 	{
+		Print("Test");
 		MVCUIManager uiManager = GetDayZGame().GetMVCUIManager();	//! Reference to mvc ui manager
 		ScriptView menu	= uiManager.GetMenu();						//! Reference to current opened script view menu
 		
