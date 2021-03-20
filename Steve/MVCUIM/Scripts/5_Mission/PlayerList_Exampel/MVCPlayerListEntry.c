@@ -13,7 +13,7 @@ class MVCPlayerListEntry: MVCScriptView
 	
 	override string GetLayoutFile() 
 	{
-		return "Steve/MVCUIManager/PlayerList_Exampel/GUI/layouts/mvc_player_list_entry.layout";
+		return "Steve/MVCUIM/GUI/layouts/mvc_player_list_entry.layout";
 	}
 	
 	override typename GetControllerType()

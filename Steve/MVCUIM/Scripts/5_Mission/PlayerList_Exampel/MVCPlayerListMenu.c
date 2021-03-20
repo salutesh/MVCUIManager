@@ -9,7 +9,7 @@ class MVCPlayerListMenu: MVCScriptViewMenu
 	
 	override string GetLayoutFile() 
 	{
-		return "Steve/MVCUIManager/PlayerList_Exampel/GUI/layouts/mvc_player_list.layout";
+		return "Steve/MVCUIM/GUI/layouts/mvc_player_list.layout";
 	}
 	
 	override typename GetControllerType() 

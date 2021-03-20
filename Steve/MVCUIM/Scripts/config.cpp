@@ -27,14 +27,10 @@ class CfgMods
 		inputs = "Steve/MVCUIM/Scripts/Data/Inputs.xml";
 		author = "Steve aka Saluteh";
 		authorID = "0"; 
-		version = "0.1"; 
+		version = "0.1";
+		versionPath = "Steve/MVCUIM/Scripts/Data/Version.hpp";
 		extra = 0;
 		type = "mod";
-		logo = "";
-		logoSmall = "";
-		logoOver = "";
-		tooltip = "MVC UI Manager";
-		overview = "";
 		
 		dependencies[] = { "Game", "World", "Mission" };
 		

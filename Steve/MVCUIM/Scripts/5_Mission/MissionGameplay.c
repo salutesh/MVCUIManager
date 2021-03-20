@@ -46,6 +46,49 @@ modded class MissionGameplay
 		return m_MVCUIMenuManager;
 	}
 	
+	override void OnUpdate( float timeslice )   
+	{
+        super.OnUpdate(timeslice);
+
+		Print("Update!");
+		
+		//! Checking for keyboard focus
+		bool inputIsFocused = false;
+		//! Reference to focused windget
+		Widget focusedWidget = GetFocus();
+
+		if ( focusedWidget )
+		{
+			if (focusedWidget.ClassName().Contains("EditBoxWidget"))
+			{
+				inputIsFocused = true;
+			}
+			else if (focusedWidget.ClassName().Contains("MultilineEditBoxWidget"))
+			{
+				inputIsFocused = true;
+			}
+		}
+
+		Man man 						= GetGame().GetPlayer(); 	//! Refernce to man
+		Input input 					= GetGame().GetInput(); 	//! Reference to input
+		UIScriptedMenu topMenu 			= m_UIManager.GetMenu(); 	//! Reference to menu
+		PlayerBase playerPB 			= PlayerBase.Cast( man );	//! Reference to player
+		
+		if (playerPB && playerPB.GetHumanInventory()) 
+		{
+			if (playerPB.GetPlayerState() == EPlayerStates.ALIVE && !playerPB.IsUnconscious())
+			{
+				if (input.LocalPress("UAMVCPlayerListToggle", false))
+				{
+					if (!topMenu && !inputIsFocused)
+					{
+						OnPlayerListTogglePressed();
+					}
+				}
+			}
+		}
+    }
+	
 	void OnPlayerListTogglePressed()
 	{
 		Print("Test");
@@ -60,51 +103,6 @@ modded class MissionGameplay
 		else if (playerListMenu && playerListMenu.IsVisible())
 		{
 			uiManager.CloseMenu();
-		}
-	}
-	
-	override void OnUpdate(float timeslice)
-	{
-		super.OnUpdate(timeslice);
-		
-		//! Checking for keyboard focus
-		bool inputIsFocused = false;
-		
-		//! Reference to focused windget
-		Widget focusedWidget = GetFocus();
-
-		if (focusedWidget)
-		{
-			if (focusedWidget.ClassName().Contains("EditBoxWidget"))
-			{
-				inputIsFocused = true;
-			} 
-			else if (focusedWidget.ClassName().Contains("MultilineEditBoxWidget"))
-			{
-				inputIsFocused = true;
-			}
-		}
-		
-		Man man 				= GetGame().GetPlayer(); 	//! Refernce to man
-		Input input 			= GetGame().GetInput(); 	//! Reference to input
-		UIScriptedMenu topMenu 	= m_UIManager.GetMenu(); 	//! Expansion reference to menu
-		PlayerBase playerPB 	= PlayerBase.Cast( man );	//! Expansion reference to player
-		
-		if (playerPB && playerPB.GetHumanInventory()) 
-		{
-			if (playerPB.GetPlayerState() == EPlayerStates.ALIVE && !playerPB.IsUnconscious())
-			{
-				if ( !topMenu && !inputIsFocused )
-				{
-					if (input.LocalPress("UAMVCPlayerListToggle", false))
-					{
-						if (!topMenu && !inputIsFocused)
-						{
-							OnPlayerListTogglePressed();
-						}
-					}
-				}
-			}
 		}
 	}
 };

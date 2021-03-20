@@ -2,6 +2,7 @@
 <modded_inputs>
     <inputs>
         <actions>
+			<input name="UAMVCPlayerListToggle" loc="" />
         </actions>
 		<exclude name="excluded">
 			<input name="UAMVCPlayerListToggle" />
